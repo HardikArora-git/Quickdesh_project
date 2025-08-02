@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Tickets - QuickDesk</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background-color: #eef2f8;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #4f46e5;
+      padding: 1rem 2rem;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    main {
+      flex-grow: 1;
+      padding: 2rem;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #4f46e5;
+    }
+
+    .search-bar {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .search-bar input {
+      padding: 10px;
+      width: 60%;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    .ticket-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .ticket-card {
+      background: white;
+      border-radius: 12px;
+      padding: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .ticket-card:hover {
+      transform: scale(1.02);
+    }
+
+    .ticket-card h3 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    .ticket-card p {
+      margin: 6px 0;
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .status {
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: bold;
+    }
+
+    .open { background-color: #facc15; color: #444; }
+    .in-progress { background-color: #60a5fa; color: white; }
+    .resolved { background-color: #34d399; color: white; }
+    .closed { background-color: #9ca3af; color: white; }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #4f46e5;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>QuickDesk</h1>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="create_ticket.html">Create Ticket</a>
+      <a href="index.html">Logout</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>My Tickets</h2>
+
+    <div class="search-bar">
+      <input type="text" placeholder="Search tickets by subject, category, or status..." />
+    </div>
+
+    <div class="ticket-list">
+      <!-- Sample ticket card 1 -->
+      <div class="ticket-card">
+        <h3>Can't access account</h3>
+        <p><strong>Category:</strong> Account</p>
+        <p><strong>Date:</strong> 01 Aug 2025</p>
+        <p><strong>Status:</strong> <span class="status open">Open</span></p>
+      </div>
+
+      <!-- Sample ticket card 2 -->
+      <div class="ticket-card">
+        <h3>Billing issue for last month</h3>
+        <p><strong>Category:</strong> Billing</p>
+        <p><strong>Date:</strong> 29 July 2025</p>
+        <p><strong>Status:</strong> <span class="status in-progress">In Progress</span></p>
+      </div>
+
+      <!-- Sample ticket card 3 -->
+      <div class="ticket-card">
+        <h3>Feature not working</h3>
+        <p><strong>Category:</strong> Technical</p>
+        <p><strong>Date:</strong> 26 July 2025</p>
+        <p><strong>Status:</strong> <span class="status resolved">Resolved</span></p>
+      </div>
+
+      <!-- Sample ticket card 4 -->
+      <div class="ticket-card">
+        <h3>Wrong deduction in invoice</h3>
+        <p><strong>Category:</strong> Billing</p>
+        <p><strong>Date:</strong> 20 July 2025</p>
+        <p><strong>Status:</strong> <span class="status closed">Closed</span></p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 QuickDesk. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

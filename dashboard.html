@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard - QuickDesk</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: #f2f6ff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #4f46e5;
+      padding: 1rem 2rem;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    main {
+      flex-grow: 1;
+      padding: 2rem;
+    }
+
+    .dashboard-title {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    .card h3 {
+      margin-bottom: 0.5rem;
+      color: #4f46e5;
+    }
+
+    .card p {
+      color: #333;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 1rem;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      background-color: #4f46e5;
+      color: white;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #4f46e5;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>QuickDesk</h1>
+    <nav>
+      <a href="#">Dashboard</a>
+      <a href="create_ticket.html">Create Ticket</a>
+      <a href="view_ticket.html">My Tickets</a>
+      <a href="index.html">Logout</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="dashboard-title">Welcome, User!</div>
+    <div class="card-container">
+
+      <div class="card">
+        <h3>Create New Ticket</h3>
+        <p>Submit a new issue to our support team with category, description, and file.</p>
+        <a href="create_ticket.html">Create Ticket</a>
+      </div>
+
+      <div class="card">
+        <h3>View My Tickets</h3>
+        <p>Track the status of tickets you’ve submitted.</p>
+        <a href="view_ticket.html">View Tickets</a>
+      </div>
+
+      <div class="card">
+        <h3>Search & Filter</h3>
+        <p>Search based on category, replies, and more (available on ticket page).</p>
+        <a href="view_ticket.html">Search</a>
+      </div>
+
+      <div class="card">
+        <h3>Notifications</h3>
+        <p>Email alerts on ticket status updates and agent replies.</p>
+        <a href="#">Coming Soon</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 QuickDesk. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
